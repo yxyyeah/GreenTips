@@ -8,6 +8,7 @@
     android:orientation="vertical"
     android:weightSum="100">
 
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0px"
@@ -21,8 +22,118 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="75">
+        android:orientation="vertical"
+        android:layout_weight="75"
+        android:weightSum="3">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="oraganic"
+                    android:padding="10dp"
+                    android:src="@drawable/gs_organic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="glass"
+                    android:padding="10dp"
+                    android:src="@drawable/gs_glass" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="plastic"
+                    android:padding="10dp"
+                    android:src="@drawable/gs_plastic" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="paper"
+                    android:padding="10dp"
+                    android:src="@drawable/gs_paper" />
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="metal"
+                    android:padding="10dp"
+                    android:src="@drawable/gs_metal" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:onClick="battery"
+                    android:padding="10dp"
+                    android:src="@drawable/gs_battery" />
+
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
 
     <LinearLayout
