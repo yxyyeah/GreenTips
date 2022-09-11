@@ -4,17 +4,31 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
 
 public class GreenReminder extends AppCompatActivity {
 
     RelativeLayout home,notes,trash,dollar;
     EditText todo_msg;
     AppCompatButton todo_button;
+    LinearLayout scroll_todo;
+    List<String> todo_list = new ArrayList<String>();
+    List<String> todo_color = new ArrayList<String>();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +40,19 @@ public class GreenReminder extends AppCompatActivity {
         dollar = (RelativeLayout) findViewById(R.id.layout_dollaricon);
         todo_msg = (EditText) findViewById(R.id.todo_msg);
         todo_button = (AppCompatButton) findViewById(R.id.todo_button);
+        scroll_todo = (LinearLayout) findViewById(R.id.scroll_todo);
+
+        //add colors
+        todo_color.add("#fce9f1");
+        todo_color.add("#e9fcf4");
+        todo_color.add("#feece8");
+        todo_color.add("#e8fafe");
+        todo_color.add("#ece8fe");
+
+        // create todos from string
+        for (String msg:todo_list){
+            prep_msg(msg);
+        }
     }
 
     public void selected(View v){
@@ -54,12 +81,45 @@ public class GreenReminder extends AppCompatActivity {
 
     public void showMsg(View v){
         String msg = todo_msg.getText().toString();
-        if (msg == ""){
+        if (msg.equals("")){
             Toast.makeText(getApplicationContext(),"Enter your todo",Toast.LENGTH_SHORT).show();
         }
         else {
-
+            prep_msg(msg);
+            todo_list.add(msg);
+            // clear edit text
+            todo_msg.setText("");
         }
 
+    }
+
+    private void prep_msg(String msg){
+        // outer wrapper
+        RelativeLayout wrapper_out = new RelativeLayout(getApplicationContext());
+        wrapper_out.setPadding(60,40,60,40);
+
+        // inner wrapper
+        RelativeLayout wrapper_in = new RelativeLayout(getApplicationContext());
+        RelativeLayout.LayoutParams params_in = new RelativeLayout.LayoutParams(
+                RelativeLayout.LayoutParams.MATCH_PARENT,
+                RelativeLayout.LayoutParams.WRAP_CONTENT);
+        wrapper_in.setLayoutParams(params_in);
+        wrapper_in.setPadding(30,30,30,30);
+        wrapper_in.setGravity(Gravity.CENTER);
+
+        // text view
+        TextView new_msg = new TextView(getApplicationContext());
+        new_msg.setText(msg);
+        new_msg.setTextSize(20);
+
+        // get random color
+        Random rand = new Random();
+        String c = todo_color.get(rand.nextInt(todo_color.size()));
+        wrapper_in.setBackgroundColor(Color.parseColor(c));
+
+        // add view
+        wrapper_in.addView(new_msg);
+        wrapper_out.addView(wrapper_in);
+        scroll_todo.addView(wrapper_out);
     }
 }

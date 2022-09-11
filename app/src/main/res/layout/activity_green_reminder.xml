@@ -55,7 +55,7 @@
                     android:text="Enter"
                     android:background="#f2e794"
                     android:backgroundTint="#f2e055"
-                    android:onClick="showMsg"/>
+                    android:onClick="showMsg" />
 
             </RelativeLayout>
         </LinearLayout>
@@ -64,7 +64,11 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="80">
-
+        <LinearLayout
+            android:id="@+id/scroll_todo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" />
 
         </ScrollView>
 
