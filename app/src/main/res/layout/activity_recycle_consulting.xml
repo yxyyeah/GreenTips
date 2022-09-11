@@ -18,12 +18,190 @@
         android:textSize="24sp"
         android:background="#64A567"/>
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="75">
+        android:orientation="vertical"
+        android:layout_weight="75"
+        android:weightSum="100">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:text="Do You Know Recycling can Make a Huge Difference?" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="6"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="We are here to help you transfer your waste into treause! " />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="15"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18sp"
+                android:fontFamily="sans-serif-condensed"
+                android:gravity="center"
+                android:text="If you are interested in recycling, please leave your contact information and we will get in touch with you as soon as possible!" />
+        </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0px"
+                android:layout_weight="10"
+                android:orientation="horizontal"
+                android:weightSum="10">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0px"
+                    android:layout_height="match_parent"
+                    android:layout_weight="10"
+                    android:hint="Enter your Name"/>
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:hint="Enter your telephone number"/>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="10"
+                android:hint="Enter your email"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="10"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/todo_button"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Submit"
+                android:background="#f2e794"
+                android:backgroundTint="#f2e055" />
+
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:orientation="horizontal"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0px"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+
+            </RelativeLayout>
+        </LinearLayout>
     </LinearLayout>
+
+
+
+
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
