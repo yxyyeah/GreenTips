@@ -3,7 +3,9 @@ package com.example.greentips;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.AppCompatButton;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -17,7 +19,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class GreenReminder extends AppCompatActivity {
@@ -28,12 +32,16 @@ public class GreenReminder extends AppCompatActivity {
     LinearLayout scroll_todo;
     List<String> todo_list = new ArrayList<String>();
     List<String> todo_color = new ArrayList<String>();
+    SharedPreferences preferences;
+    SharedPreferences.Editor editor;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_green_reminder);
+        preferences = getSharedPreferences("TODO", Context.MODE_PRIVATE);
+        editor = preferences.edit();
         home = (RelativeLayout) findViewById(R.id.layout_homeicon);
         notes = (RelativeLayout) findViewById(R.id.layout_notesicon);
         trash = (RelativeLayout) findViewById(R.id.layout_trash_canicon);
@@ -49,6 +57,11 @@ public class GreenReminder extends AppCompatActivity {
         todo_color.add("#e8fafe");
         todo_color.add("#ece8fe");
 
+        // retrieve todos from preferences
+        Map<String,String> m = (Map<String, String>) preferences.getAll();
+        Collection<String> c = m.values();
+        todo_list = new ArrayList<String>(c);
+
         // create todos from string
         for (String msg:todo_list){
             prep_msg(msg);
@@ -56,6 +69,15 @@ public class GreenReminder extends AppCompatActivity {
     }
 
     public void selected(View v){
+        // store todos to preferences
+        int n = 1;
+        for (String todo : todo_list){
+            editor.putString(Integer.toString(n),todo);
+            editor.commit();
+            n += 1;
+        }
+
+        // jump to activity
         if (v.equals(home)) {
             Intent goHome = new Intent();
             goHome.setClass(this,MainActivity.class);
@@ -77,6 +99,7 @@ public class GreenReminder extends AppCompatActivity {
             overridePendingTransition(0,0);
             goDollar.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         }
+
     }
 
     public void showMsg(View v){
@@ -90,9 +113,9 @@ public class GreenReminder extends AppCompatActivity {
             // clear edit text
             todo_msg.setText("");
         }
-
     }
 
+    // need to add buttons to delete todos
     private void prep_msg(String msg){
         // outer wrapper
         RelativeLayout wrapper_out = new RelativeLayout(getApplicationContext());
