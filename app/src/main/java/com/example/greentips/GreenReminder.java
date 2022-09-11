@@ -1,35 +1,40 @@
 package com.example.greentips;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.RelativeLayout;
+import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class GreenReminder extends AppCompatActivity {
 
     RelativeLayout home,notes,trash,dollar;
+    EditText todo_msg;
+    AppCompatButton todo_button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_green_reminder);
         home = (RelativeLayout) findViewById(R.id.layout_homeicon);
         notes = (RelativeLayout) findViewById(R.id.layout_notesicon);
         trash = (RelativeLayout) findViewById(R.id.layout_trash_canicon);
         dollar = (RelativeLayout) findViewById(R.id.layout_dollaricon);
-
+        todo_msg = (EditText) findViewById(R.id.todo_msg);
+        todo_button = (AppCompatButton) findViewById(R.id.todo_button);
     }
 
     public void selected(View v){
-        if (v.equals(notes)) {
-            Intent goNotes = new Intent();
-            goNotes.setClass(this,GreenReminder.class);
-            startActivity(goNotes);
+        if (v.equals(home)) {
+            Intent goHome = new Intent();
+            goHome.setClass(this,MainActivity.class);
+            startActivity(goHome);
             overridePendingTransition(0,0);
-            goNotes.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+            goHome.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         }
         else if (v.equals(trash)) {
             Intent goTrash = new Intent();
@@ -45,5 +50,16 @@ public class MainActivity extends AppCompatActivity {
             overridePendingTransition(0,0);
             goDollar.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         }
+    }
+
+    public void showMsg(View v){
+        String msg = todo_msg.getText().toString();
+        if (msg == ""){
+            Toast.makeText(getApplicationContext(),"Enter your todo",Toast.LENGTH_SHORT).show();
+        }
+        else {
+
+        }
+
     }
 }

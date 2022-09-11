@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GarbageSorting"
+    android:orientation="vertical"
+    android:weightSum="100">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="10"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:text="Garbage Sorting"
+        android:textSize="24sp"
+        android:background="#64A567"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="75">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0px"
+        android:layout_weight="15"
+        android:orientation="horizontal"
+        android:weightSum="100"
+        android:background="#BBDEBA">
+
+        <RelativeLayout
+            android:id="@+id/layout_homeicon"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:onClick="selected">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="25dp"
+                android:src="@drawable/home_icon" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_notesicon"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:onClick="selected">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="28dp"
+                android:src="@drawable/notes_icon" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_trash_canicon"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:background="#227325"
+            android:onClick="selected">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="28dp"
+                android:src="@drawable/trash_can_icon" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layout_dollaricon"
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:onClick="selected">
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="25dp"
+                android:src="@drawable/dollar_icon" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/OneDrive - University of Waterloo/GreenTips/app/src/main/res/layout/activity_garbage_sorting.xml" value="0.3482789855072464" />
+        <entry key="..\:/OneDrive - University of Waterloo/GreenTips/app/src/main/res/layout/activity_green_reminder.xml" value="0.25" />
         <entry key="..\:/OneDrive - University of Waterloo/GreenTips/app/src/main/res/layout/activity_main.xml" value="0.3482789855072464" />
+        <entry key="..\:/OneDrive - University of Waterloo/GreenTips/app/src/main/res/layout/activity_recycle_consulting.xml" value="0.3482789855072464" />
       </map>
     </option>
   </component>
