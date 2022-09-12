@@ -18,13 +18,27 @@
         android:textSize="24sp"
         android:background="#64A567"/>
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_weight="75"
         android:weightSum="100">
+
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:weightSum="100"> </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="80"
+        android:weightSum="100">
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,13 +58,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0px"
-            android:layout_weight="6"
+            android:layout_weight="10"
             android:orientation="horizontal">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textSize="18sp"
+                android:textSize="20sp"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
                 android:text="We are here to help you transfer your waste into treause! " />
@@ -83,10 +97,10 @@
 
                 <EditText
                     android:id="@+id/name"
-                    android:layout_width="0px"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_weight="10"
-                    android:hint="Enter your Name"/>
+                    android:layout_weight="7"
+                    android:hint="Enter your Name" />
 
             </LinearLayout>
 
@@ -196,8 +210,14 @@
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
+        <LinearLayout
+            android:layout_width="0px"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="10"
+            android:weightSum="100"> </LinearLayout>
 
-
+    </LinearLayout>
 
 
 
