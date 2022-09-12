@@ -12,18 +12,78 @@
         android:layout_width="match_parent"
         android:layout_height="0px"
         android:layout_weight="10"
+        android:background="#64A567"
         android:gravity="center"
         android:paddingTop="10dp"
-        android:text="About Us"
-        android:textSize="24sp"
-        android:background="#64A567"/>
+        android:text="Home"
+        android:textSize="24sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0px"
-        android:layout_weight="75">
+        android:layout_weight="75"
+        android:weightSum="100"
+        android:orientation="vertical"
+        android:background="@drawable/background"
+        android:alpha="0.6"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:paddingTop="10pt"
+            android:layout_weight="25">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:text="We are here to help make the Earth a better home for everyone!"
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="70">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="30sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="@color/white"
+                android:text="There are three parts in our app: Green Reminders, Garbage Sorting, and Recycle Consulting. We hope our APP can help you have a better understanding of going green." />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0px"
+            android:layout_weight="10">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-condensed-light"
+                android:gravity="center"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:text="" />
+
+        </LinearLayout>
+
 
     </LinearLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
