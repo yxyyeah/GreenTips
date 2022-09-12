@@ -19,13 +19,16 @@
         android:textSize="24sp"
         android:background="#64A567"/>
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/main_rl_layout"
         android:layout_width="match_parent"
         android:layout_height="0px"
+        android:layout_weight="75">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        android:layout_weight="75"
         android:weightSum="3">
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0px"
@@ -42,7 +45,7 @@
                 <ImageView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:onClick="oraganic"
+                    android:onClick="organic"
                     android:padding="10dp"
                     android:src="@drawable/gs_organic" />
 
@@ -135,6 +138,8 @@
             </RelativeLayout>
         </LinearLayout>
     </LinearLayout>
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
