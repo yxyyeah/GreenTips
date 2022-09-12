@@ -68,7 +68,7 @@
                 android:textSize="20sp"
                 android:fontFamily="sans-serif-condensed"
                 android:gravity="center"
-                android:text="We are here to help you transfer your waste into treause! " />
+                android:text="We are here to help you transfer your waste into treasure! " />
         </LinearLayout>
 
 
@@ -146,6 +146,7 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="10"
+            android:onClick="submit"
             android:orientation="horizontal"
             android:weightSum="10">
 
@@ -153,9 +154,10 @@
                 android:id="@+id/todo_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Submit"
                 android:background="#f2e794"
-                android:backgroundTint="#f2e055" />
+                android:backgroundTint="#f2e055"
+                android:onClick="submit"
+                android:text="Submit" />
 
         </LinearLayout>
 
