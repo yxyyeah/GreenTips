@@ -62,6 +62,8 @@ public class GreenReminder extends AppCompatActivity {
         Collection<String> c = m.values();
         todo_list = new ArrayList<String>(c);
 
+        // pre-made todo
+        todo_list.add(0,"Bring reusable cups to Tim Hortons.");
         // create todos from string
         for (String msg:todo_list){
             prep_msg(msg);
@@ -70,6 +72,7 @@ public class GreenReminder extends AppCompatActivity {
 
     public void selected(View v){
         // store todos to preferences
+        todo_list.remove(0);    // the first default one will always be added
         int n = 1;
         for (String todo : todo_list){
             editor.putString(Integer.toString(n),todo);

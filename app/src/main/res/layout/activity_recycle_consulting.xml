@@ -146,7 +146,6 @@
             android:layout_width="match_parent"
             android:layout_height="0px"
             android:layout_weight="10"
-            android:onClick="submit"
             android:orientation="horizontal"
             android:weightSum="10">
 
@@ -154,8 +153,7 @@
                 android:id="@+id/todo_button"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="#f2e794"
-                android:backgroundTint="#f2e055"
+                android:background="#f2e055"
                 android:onClick="submit"
                 android:text="Submit" />
 
