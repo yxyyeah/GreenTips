@@ -44,4 +44,11 @@ public class RecycleConsulting extends AppCompatActivity {
             goHome.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         }
     }
+    
+    public void submit(View v){
+        v = new AppCompatButton(getApplicationContext());
+        v.setBackgroundColor(android.graphics.Color.parseColor("#808080"));
+        Toast.makeText(getApplicationContext(), "Thank you for your submision! ", Toast.LENGTH_SHORT).show();
+    }
+    
 }
