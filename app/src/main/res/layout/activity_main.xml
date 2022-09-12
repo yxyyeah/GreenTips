@@ -43,7 +43,7 @@
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:textColor="@color/white"
-                android:text="We are here to help make the Earth a better home for everyone!"
+                android:text="We are here to help make the Earth a better home for everyone!"/>
         </LinearLayout>
 
         <LinearLayout
