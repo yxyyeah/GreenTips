@@ -15,7 +15,7 @@
         android:background="#64A567"
         android:gravity="center"
         android:paddingTop="10dp"
-        android:text="Home"
+        android:text="GreenTips"
         android:textSize="24sp" />
 
     <LinearLayout
